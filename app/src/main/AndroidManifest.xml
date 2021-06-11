@@ -9,7 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomJetPack">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ui.ItemListActivity"
+            android:label="@string/title_item_list"
+            android:theme="@style/Theme.RoomJetPack.NoActionBar"></activity>
+        <activity
+            android:name=".ui.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ui.ItemListActivity"
+            android:theme="@style/Theme.RoomJetPack.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.raveline.roomjetpack.ui.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".ui.OtherActivity"
+            android:label="@string/title_activity_other"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
